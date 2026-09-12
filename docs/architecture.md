@@ -38,7 +38,14 @@ OHLCV data (public/synthetic) -> point-in-time feature build
   `configurable-model-training` KB pattern's optional-heavy-deps rule.
 - Reuse `trading-ai-suite`'s OHLCV ingestion/caching code as a dependency
   where practical instead of re-implementing it — see that suite's
-  `trading_core` app.
+  `trading_core` app. **Update (Phase 1, issue #1):** as of this issue,
+  `trading-ai-suite`'s `src/` is empty (flagged in `STATUS.md` — issues
+  closed there with no matching code), so there was nothing to import from.
+  `forecasting_core.cache` reuses the *pattern* described above (atomic
+  temp-file-then-rename write, validate-on-read with eviction of a bad
+  cache file) implemented fresh here. If `trading-ai-suite` gets real code
+  later, reconcile the two rather than keeping duplicate cache
+  implementations.
 
 ## Consolidation note
 
