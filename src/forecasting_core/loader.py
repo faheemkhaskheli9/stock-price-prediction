@@ -48,7 +48,7 @@ def load_ohlcv(
     A `csv:<path>` source that doesn't exist or fails schema validation
     raises loudly rather than silently falling back to synthetic data —
     the caller named that source, so hiding the mistake would be worse
-    than a crash (see CLAUDE.md rule 7: strict with explicit input).
+    than a crash (be lenient with defaults, strict with explicit input).
     """
     source = source or os.environ.get("OHLCV_SOURCE", "synthetic")
     cache_dir = Path(cache_dir)
