@@ -1,0 +1,11 @@
+[project]
+name = "stock-price-prediction"
+version = "0.1.0"
+description = "Deep-learning sequence-model benchmark for stock price forecasting (LSTM/GRU/Transformer vs. classical baselines)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]

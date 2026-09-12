@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+build/
+dist/
+db.sqlite3
+
+# Data & models
+*.csv
+*.parquet
+data/raw/
+data/processed/
+*.pt
+*.ckpt
+runs/
+mlruns/
+
+# IDE
+.vscode/*
+!.vscode/launch.json
+.idea/
